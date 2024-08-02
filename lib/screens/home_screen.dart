@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_chat_flutter/widgets/category_selector.dart';
 
+import '../widgets/favorite_contacts.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -46,7 +48,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
-                      topRight: Radius.circular(30))),
+                      topRight: Radius.circular(30)),
+              ),
+              child: Column(
+                children: [
+                  const FavoriteContacts(),
+
+                ],
+              ),
             ),
           )
         ],

@@ -25,7 +25,7 @@ final User maman =
     User(id: 1, name: 'Mman.kelly', imageUrl: 'assets/images/Maman.jpeg');
 
 final User kate =
-    User(id: 2, name: 'Sister', imageUrl: 'assets/images/Kate.jpeg');
+    User(id: 2, name: 'Sister', imageUrl: 'assets/images/Sister.jpeg');
 
 final User amanda =
     User(id: 3, name: 'Amanda', imageUrl: 'assets/images/Amanda.jpeg');
@@ -42,7 +42,7 @@ final User debs =
     User(id: 6, name: 'Debs', imageUrl: 'assets/images/Debs.jpeg');
 
 // FAVORITE CONTACT
-List<User> fovorite = [kate, amanda, maman, debs];
+List<User> favorite = [kate, amanda, maman, debs, jo];
 
 //MESSAGE SCREEN HOME
 
