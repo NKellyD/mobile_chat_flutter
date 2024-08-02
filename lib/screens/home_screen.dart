@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_chat_flutter/widgets/category_selector.dart';
 
@@ -12,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.menu),
@@ -21,22 +23,32 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         title: const Text(
           'Chats',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25,color: Colors.white),
+          style: TextStyle(
+              fontWeight: FontWeight.bold, fontSize: 25, color: Colors.white),
         ),
         elevation: 0.0,
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.menu),
+            icon: const Icon(Icons.search),
             iconSize: 20.0,
             color: Colors.white,
             onPressed: () {},
           ),
         ],
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.blueGrey,
       ),
-      body: const Column(
+      body: Column(
         children: [
-        CategorySelector()
+          const CategorySelector(),
+          Expanded(
+            child: Container(
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30))),
+            ),
+          )
         ],
       ),
     );

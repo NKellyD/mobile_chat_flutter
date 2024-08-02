@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'CHAT KD',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.red,
+        primaryColor: Colors.blueGrey,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const HomeScreen(),
