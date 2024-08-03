@@ -54,6 +54,34 @@ class _ChatScreenState extends State<ChatScreen> {
       ],
     );
   }
+  _buildMessageComposer(){
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      height: 70,
+      child: Row(
+        children: [
+          IconButton(
+            icon:  const Icon(Icons.photo,size: 22,),
+            iconSize: 20.0,
+            color: Colors.red,
+            onPressed: () {},
+          ),
+           const Expanded(child: TextField(
+            decoration: InputDecoration(
+              hintText: 'send a message....',
+
+            ),
+          )),
+          IconButton(
+            icon:  const Icon(Icons.send,size: 22,),
+            iconSize: 20.0,
+            color: Colors.red,
+            onPressed: () {},
+          ),
+        ],
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -121,6 +149,7 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
             ),
           ),
+          _buildMessageComposer()
         ],
       ),
     );
