@@ -52,7 +52,7 @@ List<Message> chats = [
       time: '4:20 PM',
       text: 'Bonjour! vous allez bien?',
       isLiked: false,
-      unread: true),
+      unread: false),
   Message(
       sender: amanda,
       time: '3:10 PM',
@@ -82,6 +82,63 @@ List<Message> chats = [
 
   Message(
       sender: maman,
+      time: '0:32 PM',
+      text: 'Mwaramutse murakomeye hiyo?',
+      isLiked: true,
+      unread: false),
+];
+
+//Message CHAT SCREEN
+
+List<Message> messages = [
+  Message(
+      sender: owen,
+      time: '4:20 PM',
+      text: 'Bonjour! vous allez bien?',
+      isLiked: false,
+      unread: false),
+  Message(
+      sender: currentUser,
+      time: '4:20 PM',
+      text: 'Bonjour! je vais bien et vous ca va?',
+      isLiked: false,
+      unread: true),
+  Message(
+      sender: owen,
+      time: '3:10 PM',
+      text: 'Olla! common estas?',
+      isLiked: false,
+      unread: true),
+  Message(
+      sender: owen,
+      time: '3:09 PM',
+      text: 'Bonjour! pourriez vous m\'appeler?',
+      isLiked: true,
+      unread: true),
+
+  Message(
+      sender: currentUser,
+      time: '2:01 PM',
+      text: 'Hello n bn?',
+      isLiked: true,
+      unread: false),
+
+  Message(
+      sender: owen,
+      time: '4:20 PM',
+      text: 'je me prepare a 10h',
+      isLiked: false,
+      unread: true),
+
+  Message(
+      sender: owen,
+      time: '2:22 PM',
+      text: 'Hey! merci pour les chassures?',
+      isLiked: true,
+      unread: true),
+
+  Message(
+      sender: currentUser,
       time: '0:32 PM',
       text: 'Mwaramutse murakomeye hiyo?',
       isLiked: true,

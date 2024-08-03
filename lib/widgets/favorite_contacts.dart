@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../models/message.dart';
+import '../screens/chat_screen.dart';
 
 class FavoriteContacts extends StatefulWidget {
   const FavoriteContacts({super.key});
@@ -21,7 +22,7 @@ class _FavoriteContactsState extends State<FavoriteContacts> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                'Favorite Contacts',
+                'Status',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
@@ -43,24 +44,28 @@ class _FavoriteContactsState extends State<FavoriteContacts> {
             scrollDirection: Axis.horizontal,
               itemCount: favorite.length,
               itemBuilder: (BuildContext context, int index){
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 30,
-                        backgroundImage: AssetImage(favorite[index].imageUrl),
-                      ),
-                      const SizedBox(height: 5,),
-                      Text(
-                        favorite[index].name,
-                        style: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white
+                return GestureDetector(
+                  onTap: ()=> Navigator.push(context, MaterialPageRoute(builder:(_) =>ChatScreen(user: favorite[index],))),
+
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage(favorite[index].imageUrl),
                         ),
-                      )
-                    ],
+                        const SizedBox(height: 5,),
+                        Text(
+                          favorite[index].name,
+                          style: const TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 );
               }
