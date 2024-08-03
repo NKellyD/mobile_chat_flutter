@@ -72,4 +72,18 @@ List<Message> chats = [
       text: 'Hello n bn?',
       isLiked: true,
       unread: false),
+
+  Message(
+      sender: pawel,
+      time: '2:22 PM',
+      text: 'Hey! merci pour les chassures?',
+      isLiked: true,
+      unread: true),
+
+  Message(
+      sender: maman,
+      time: '0:32 PM',
+      text: 'Mwaramutse murakomeye hiyo?',
+      isLiked: true,
+      unread: false),
 ];
