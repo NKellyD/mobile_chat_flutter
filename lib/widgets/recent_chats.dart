@@ -24,16 +24,38 @@ class _RecentChatsState extends State<RecentChats> {
                 final Message chat =  chats[index];
                return Row(
                  children: [
-                    CircleAvatar(
-                     radius: 30,
-                     backgroundImage: AssetImage(chat.sender.imageUrl),
+                   Row(
+                     children: [
+                        CircleAvatar(
+                         radius: 30,
+                         backgroundImage: AssetImage(chat.sender.imageUrl),
+                       ),
+                       Column(
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                         children: [
+                           Text(
+                             chat.sender.name,
+                             style: const TextStyle(
+                                 color: Colors.white
+                             ),
+                           ),
+                           Text(
+                             chat.text,
+                             style: const TextStyle(
+                                 color: Colors.white
+                             ),
+                           ),
+                         ],
+                       ),
+
+                     ],
                    ),
-                   Text(
-                    chat.sender.name,
-                   style: const TextStyle(
-                       color: Colors.white
-                   ),
-                   ),
+                    Column(
+                     children: [
+                       Text(chat.time,style: const TextStyle(color: Colors.white),),
+                       const Text('NEW',style: TextStyle(color: Colors.white),)
+                     ],
+                   )
                  ],
                );
               }

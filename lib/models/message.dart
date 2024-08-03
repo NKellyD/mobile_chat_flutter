@@ -33,7 +33,7 @@ final User amanda =
 final User jo = User(id: 4, name: 'Jordy', imageUrl: 'assets/images/Jo.jpeg');
 
 final User pawel =
-    User(id: 4, name: 'M.kelly', imageUrl: 'assets/images/Pawel.jpeg');
+    User(id: 4, name: 'Pawel', imageUrl: 'assets/images/Pawel.jpeg');
 
 final User owen =
     User(id: 5, name: 'Owen', imageUrl: 'assets/images/Owen.jpeg');
