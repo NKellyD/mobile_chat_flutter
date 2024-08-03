@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_chat_flutter/widgets/category_selector.dart';
+import 'package:mobile_chat_flutter/widgets/recent_chats.dart';
 
 import '../widgets/favorite_contacts.dart';
 
@@ -45,15 +46,15 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: Container(
               decoration: const BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.black54,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
                       topRight: Radius.circular(30)),
               ),
-              child: Column(
+              child: const Column(
                 children: [
-                  const FavoriteContacts(),
-
+                  FavoriteContacts(),
+                  RecentChats()
                 ],
               ),
             ),

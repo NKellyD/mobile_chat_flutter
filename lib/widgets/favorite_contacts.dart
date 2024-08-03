@@ -26,11 +26,11 @@ class _FavoriteContactsState extends State<FavoriteContacts> {
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                     fontFamily: 'Calibri',
-                    color: Colors.black,
+                    color: Colors.blue,
                     letterSpacing: 1),
               ),
               IconButton(
-                icon: const Icon(Icons.more_horiz),
+                icon: const Icon(Icons.more_horiz,color: Colors.white,),
                 onPressed: () {},
               )
             ],
@@ -55,8 +55,9 @@ class _FavoriteContactsState extends State<FavoriteContacts> {
                       Text(
                         favorite[index].name,
                         style: const TextStyle(
-                          fontSize: 12,
-                          color: Colors.blueAccent
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white
                         ),
                       )
                     ],
