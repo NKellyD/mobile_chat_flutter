@@ -61,7 +61,7 @@ class PinPopupWidget extends StatelessWidget {
                       padding: EdgeInsets.all(4),
                       decoration: BoxDecoration(border: Border.all(color: Colors.white12, width: .75)),
                       child: Text(
-                        'annuler',
+                        'Annuler',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -75,7 +75,7 @@ class PinPopupWidget extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.red, border: Border.all(color: Colors.red, width: .5)),
                       child: Text(
-                        'confirmer',
+                        'Confirmer',
                         style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                     ),
