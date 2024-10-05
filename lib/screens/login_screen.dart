@@ -15,25 +15,59 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Stack(
         children: [
-          Image(image: AssetImage('assets/images/kdlogo.jpg')),
-          SizedBox(height: 20,),
-          Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: getTextFormField(controller: UserName, hintName: 'user'),
-              ),
-              SizedBox(height: 10,),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: getTextFormField(controller: Password, hintName: 'password'),
-              ),
-            ],
-          )
+          ClipPath(
+            clipper: BazierCurve(),
+            child: Container(
+             // padding: EdgeInsets.only(top: 10),
+              color: Colors.blue,
+              height: 400,
+              //width: 400,
+            ),
+          ),
+          //Image(image: AssetImage('assets/images/kdlogo.jpg')),
+
         ],
       ),
     );
   }
 }
+
+
+
+
+class BazierCurve extends CustomClipper<Path>{
+  @override
+  Path getClip(Size size) {
+    Path path = Path();
+
+
+    path.lineTo(0, size.height * 0.75);
+
+    path.quadraticBezierTo(
+        size.width * 0.30,
+        size.height * 0.5,
+        size.width * 0.5,
+        size.height * 0.75
+    );
+
+    path.quadraticBezierTo(
+        size.width * 0.75,
+        size.height + 1,
+        size.width ,
+        size.height * 0.55
+    );
+
+    path.lineTo(size.width, 0);
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+   return true;
+  }
+
+}
+
