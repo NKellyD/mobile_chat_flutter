@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_chat_flutter/widgets/bottom_nav_bar_widget.dart';
 import 'package:mobile_chat_flutter/widgets/category_selector.dart';
 import 'package:mobile_chat_flutter/widgets/recent_chats.dart';
 
